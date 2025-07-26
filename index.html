@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Everything We Were, Everything We Are - Our Memories</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Dancing+Script:wght@400;600;700&family=Courier+Prime:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --cream: #f7f3e9;
+            --rose: #f4c2c2;
+            --twilight: #6b73ff;
+            --soft-black: #2d3748;
+            --paper-white: #fefefe;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            background: linear-gradient(135deg, var(--cream) 0%, var(--rose) 50%, #e2e8f0 100%);
+            min-height: 100vh;
+        }
+        
+        .script-font {
+            font-family: 'Dancing Script', cursive;
+        }
+        
+        .typewriter-font {
+            font-family: 'Courier Prime', monospace;
+        }
+        
+        .paper-texture::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 25% 25%, rgba(255,255,255,0.1) 1px, transparent 1px),
+                radial-gradient(circle at 75% 75%, rgba(0,0,0,0.05) 1px, transparent 1px);
+            background-size: 3px 3px;
+            pointer-events: none;
+            opacity: 0.3;
+        }
+        
+        .song-section {
+            position: relative;
+            padding: 4rem 0;
+            overflow: hidden;
+        }
+        
+        .lyric-container {
+            background: rgba(255,255,255,0.9);
+            backdrop-filter: blur(10px);
+            border: 2px solid rgba(255,255,255,0.3);
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            line-height: 1.8;
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out forwards;
+        }
+        
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .bg-housewarming { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+        .bg-witch { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .bg-shade { background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%); }
+        .bg-domingo { background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%); }
+        .bg-ben { background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%); }
+        .bg-dance { background: linear-gradient(135deg, #fa709a 0%, #fee140 100%); }
+        .bg-girl { background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%); }
+        .bg-brazo { background: linear-gradient(135deg, #ff9a9e 0%, #fecfef 100%); }
+        .bg-piggies { background: linear-gradient(135deg, #a1c4fd 0%, #c2e9fb 100%); }
+        .bg-springs { background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%); }
+        .bg-uncle { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); }
+        .bg-here { background: linear-gradient(135deg, #fdfcfb 0%, #e2d1c3 100%); }
+        .bg-flame { background: linear-gradient(135deg, #ff9a56 0%, #ff6b6b 100%); }
+        .bg-valentina { background: linear-gradient(135deg, #ff6b6b 0%, #ffa726 100%); }
+        
+        .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.5);
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
+        
+        .nav-dot.active {
+            background: white;
+            transform: scale(1.2);
+        }
+        
+        @media print {
+            body { background: white !important; }
+            .song-section { page-break-inside: avoid; }
+            .nav-container { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <div class="nav-container fixed top-8 right-8 z-50 space-y-3">
+        <div class="nav-dot active" data-target="#intro"></div>
+        <div class="nav-dot" data-target="#track1"></div>
+        <div class="nav-dot" data-target="#track2"></div>
+        <div class="nav-dot" data-target="#track3"></div>
+        <div class="nav-dot" data-target="#track4"></div>
+        <div class="nav-dot" data-target="#track5"></div>
+        <div class="nav-dot" data-target="#track6"></div>
+        <div class="nav-dot" data-target="#track7"></div>
+        <div class="nav-dot" data-target="#track8"></div>
+        <div class="nav-dot" data-target="#track9"></div>
+        <div class="nav-dot" data-target="#track10"></div>
+        <div class="nav-dot" data-target="#track11"></div>
+        <div class="nav-dot" data-target="#track12"></div>
+        <div class="nav-dot" data-target="#track13"></div>
+        <div class="nav-dot" data-target="#track14"></div>
+        <div class="nav-dot" data-target="#outro"></div>
+    </div>
+
+    <!-- Intro Section -->
+    <section id="intro" class="min-h-screen flex items-center justify-center relative paper-texture">
+        <div class="text-center max-w-4xl mx-auto px-6 fade-in">
+            <h1 class="script-font text-6xl md:text-8xl text-gray-800 mb-8 leading-tight">
+                Everything We Were,<br>
+                Everything We Are
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 font-light">
+                Our memories, our stories, our forever friendship
+            </p>
+            <div class="w-32 h-1 bg-gradient-to-r from-rose-300 to-blue-300 mx-auto rounded-full mb-8"></div>
+            <p class="text-lg text-gray-500 typewriter-font">
+                "A digital diary of moments that made us who we are"
+            </p>
+        </div>
+    </section>
+
+    <!-- Track 1: Housewarming Heartbeat -->
+    <section id="track1" class="song-section bg-housewarming paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Housewarming Heartbeat
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+Major said, "Come out tonight"
+New townhome on the Houston side
+Didn't know I'd meet a spark
+In a stranger with those lion eyes
+
+You walked in, heat in the room
+Persian boy in vintage shoes
+They said you made… films of a kind
+But it wasn't that — just rumors, right?
+
+It started with cheap wine and louder laughs
+Plastic cups and stories we half-assed
+Didn't know your name would mean this much
+But the night lit up when you showed up
+That housewarming heartbeat, the start of the flame
+I never saw it coming, but I'm so glad it came
+
+You were moving in with Sadiq and Andrew
+I was crashing in, just passing through
+Major's the thread we didn't see
+Till we three made our little trinity
+
+We danced like fools on tile floors
+Told secrets we'd forgotten by four
+The night was ours, no script, no plan
+And somehow, that's where it all began
+
+It started with cheap wine and louder laughs
+Plastic cups and stories we half-assed
+Didn't know your name would mean this much
+But the night lit up when you showed up
+That housewarming heartbeat, the start of the flame
+I never saw it coming, but I'm so glad it came
+
+Looking back, we were just kids in disguise
+Thinking this was just a night, not a lifelong ride
+But something stuck between the lines
+The joke, the glance, the borrowed time
+
+It started with cheap wine and louder laughs
+Plastic cups and stories we half-assed
+Didn't know your name would mean this much
+But the night lit up when you showed up
+That housewarming heartbeat, the start of the flame
+And bestie, we've been burning ever since that day
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 2: A Witch Named Major -->
+    <section id="track2" class="song-section bg-witch paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    A Witch Named Major
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+He lived in a casita made of dreams and dust
+Pull-ups on the porch, whole house go bust
+Said he was a witch, said he'd never die
+Called himself a phoenix with takka in his eye
+
+He brought the fire, we brought the lighter
+Three kings of the night, riding dirty and higher
+
+He was yelling at stop signs, starting club fights
+Screamed "Goodbye Grandma!" in the middle of the night
+A mess, a riot, a spiritual guide
+He made us a trinity we never denied
+But not all spells stick, not all stars align
+Still, our friendship outlived that wild timeline
+
+Major broke his leg — got that check for life
+Said "Don't call me dramatic, I just survived"
+He'd stir the pot, then run the show
+And leave us holding secrets we didn't wanna know
+
+He danced with chaos, kissed the absurd
+And called it growth with every slurred word
+
+He was yelling at stop signs, starting club fights
+Screamed "Goodbye Grandpa!" like he had the right
+A witch, a phoenix, a headline on fire
+The glue that cracked, the spark, the choir
+But not all chaos stays, not all stories rhyme
+Still, we held on through the break in time
+
+He said, "I rise from the ashes,"
+But sometimes ashes blow away
+And all that's left
+Is who stayed
+
+He was yelling at stop signs, starting club fights
+Living in a casita that shook every night
+He brought us together, then broke the spell
+But we found something deeper when the curtain fell
+The trio faded, but we never burned
+Real ones circle back — and we returned
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 3: Wrong Shade, Right Night -->
+    <section id="track3" class="song-section bg-shade paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Wrong Shade, Right Night
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+He was Hef in a velvet robe
+We were bunnies in our party mode
+Black lace ears and cotton tails
+Strutting down Montrose like fairytales
+
+We hit up Steve for a quick fix
+Phill said, "Just a little glam, no tricks"
+But the flash went off — oh no, the tone
+His face said winter, his neck said stone
+
+But baby, we laughed
+And we looked like gold
+Even with foundation
+Four shades too bold
+
+Wrong shade, right night
+Montrose lit like stage lights
+We were hopping bar to bar
+Like we were born for the spotlight
+Flashback glam, trophy tight
+We didn't blend — but we still shined bright
+Wrong shade, right night
+And we owned it
+
+Socks too high, but we didn't care
+Bunny Ears flying through the midnight air
+Photos snapped, and the boys all stared
+We were the fantasy no one dared
+
+Meteor lit, crowd on fire
+Group costume goals — entire empire
+Trophy in hand, bunny in bloom
+We pranced like queens in a dressing room
+
+Wrong powder, wrong hue
+But baby, our joy still matched the view
+
+Wrong shade, right night
+Montrose lit like stage lights
+We were hopping bar to bar
+Like we were born for the spotlight
+Flashback glam, trophy tight
+We didn't blend — but we still shined bright
+Wrong shade, right night
+And we owned it
+
+Black bunny, white bunny,
+Hef full of sweat —
+The holy trinity of chaos and contour.
+We didn't come to match…
+We came to win.
+
+Wrong shade, right night
+Call it messy, call it right
+We were beauty, we were myth
+In little shorts with tails
+Trophy held, smiles wide
+Still laughing every time we rewind
+Wrong shade, right night
+And baby, we were divine
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 4: Domingo de Escándalo -->
+    <section id="track4" class="song-section bg-domingo paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Domingo de Escándalo
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+Primera vez en San Fran, qué emoción
+Viernes con Jujubee, pura vibración
+Un francés me miró, pero no se acercó
+Yo dije, "ni modo", y la noche siguió
+
+Pan de sopa por la bahía
+Fotos lindas con alegría
+Castro brillaba bajo el sol
+Y en Lime empezó el descontrol
+
+El francés me ve en la fila
+Dice "ven conmigo", sin mentira
+Saltamos la cola, entramos al show
+Y ahí empezó todo el desmadre, bro
+
+Domingo de escándalo, luces bajan
+Los meseros bailan y nadie se queja
+Bunnies en barra, ropa volando
+Jesús en calzón y todos gritando
+Vodka en el parque, con vasos de fiesta
+Esta Pascua fue divina y bien perversa
+
+Un chico me dice "al baño, ¿vas?"
+Yo pensando, esto va a ser fugaz
+Pero cierra la puerta, se baja el pantalón
+Y con acento francés dice "voy a hacer popó"
+
+Golpes en la puerta, quieren entrar
+Yo aguantando el pomo para no tumbar
+Sale el olor, yo con trauma facial
+Pero salimos… como si nada fue mal
+
+De ahí al Oxxo a comprar licor
+Vodka barata, puro sabor
+Llegamos al parque, el sol brilló
+Y alguien gritó: ¡El concurso empezó!
+
+Domingo de escándalo, luces bajan
+Los meseros bailan y nadie se queja
+Bunnies en barra, ropa volando
+Jesús en calzón y todos gritando
+Vodka en el parque, con vasos de fiesta
+Esta Pascua fue divina y bien perversa
+
+"¿Quién es el más santo… y más sexy?"
+Jesús uno gira. Jesús dos perrea.
+Jesús tres… se lo lleva todo.
+
+Domingo de escándalo, nadie rezando
+Pero las memorias siguen brillando
+Fotos en puente, risas eternas
+San Francisco… nuestras pequeñas leyendas
+Vodka en el parque, con vasos de fiesta
+Esta Pascua fue divina y bien perversa
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 5: Ben 10 (But Really 9) -->
+    <section id="track5" class="song-section bg-ben paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Ben 10 (But Really 9)
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+He had no teeth, but had the nerve
+Bones and skin, and no reserve
+Drank Dr. Pepper like it was wine
+Had Phill's heart — never deserved mine
+
+Worked the bars, then played the scene
+Whispers said he was… not that clean
+I got flowers, he got lies
+And we all watched it crash in real time
+
+Ben 10, but really 9
+Big in one way, but not in mind
+Jealous stares, anxiety eyes
+Screaming in the yard under neon skies
+No love, just fleas and fights
+Phill gave his heart, Ben gave him nights
+Ben 10, but really 9
+We survived, but damn — it took time
+
+He hated me 'cause I wouldn't fold
+Tried to play alpha, but just got cold
+Great Dane named Colt, ate up the floor
+Then pushed Phill out like love was war
+
+People watched us through that fence
+Like a drag show, just more intense
+Ben was chaos, Colt was worse
+And Phill got left with the hurt and the curse
+
+Ben 10, but really 9
+Big in one way, but not in mind
+No kisses, no flowers, no spine
+He played with strangers, crossed the line
+Club secrets told us the truth
+He wasn't a man, just a sleuth
+Ben 10, but really 9
+And porn was the final sign
+
+Maybe he's gone
+Maybe he's filming
+Maybe he's dust
+Or maybe just chilling
+Either way —
+We're fine now
+
+Ben 10, but really 9
+Phill deserved more than borrowed time
+From barback lies to barking dogs
+We found our way through every fog
+Ben 10, but we cut the tie
+No more drama, no more why
+Ben 10…
+But really nine.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 6: I Just Want to Dance -->
+    <section id="track6" class="song-section bg-dance paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    I Just Want to Dance
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+He showed up sweet, said nothing loud
+Said he had a dream to dance for the crowd
+Phill just watched the storm begin
+From the first blur night to the broken hinge
+
+Tank tops tight, those diary lines
+"Who is this stranger?" — but the sex was fine
+Quiet boy with a neon heart
+He lit up the club and then fell apart
+
+Birthday screams and solo spins
+Said "this is where my real life begins"
+But every time we fought again
+I broke the door — it never ends
+
+"I just want to dance," he cried
+Speaker box tears in his eyes
+Dragged himself across the floor
+Then ran out, then back for more
+Phill was there, just sipping slow
+Watching chaos steal the show
+"I just want to dance," on repeat
+Barefoot crying in the street
+
+One-bedroom war, with secrets stacked
+Three doors broken, never looked back
+Phill and I in the awkward dawn
+While Alfie packed what wasn't gone
+
+Threw his things from the second floor
+He came back like nothing before
+Said "Last night was kinda fun…"
+Boy, pack your stuff — the show is done
+
+"I just want to dance," he cried
+Glitter bruised and undefined
+One hand waving in the dark
+While I lit his dreams on fire with spark
+Phill sat silent, wide-eyed, still
+Watching heartbreak lose its thrill
+"I just want to dance," on loop
+One more twink, one more fluke
+
+Who is this stranger I'm sleeping with?
+(That's what he wrote…
+but he kept sleeping with him.)
+And now?
+He's probably dancing somewhere.
+
+"I just want to dance," he said
+Heart on the floor, heels overhead
+He disappeared in dawn's last chance
+No goodbye, just one more dance
+Phill and I, just sitting there
+Watching silence fill the air
+The music stopped, the lights went red
+And that was the end of Alfie's thread
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 7: Best Girl Ever -->
+    <section id="track7" class="song-section bg-girl paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Best Girl Ever
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+She was leasing dreams at Memorial Heights
+Bubbly voice, clipboard tight
+Said "sign here," then sipped my drink
+By the third shot, she didn't blink
+
+Introduced her to the crew one night
+She tossed her purse and screamed in delight
+Phill was shook, we all agreed:
+"This girl's a walking legacy"
+
+One hand in the air, top off, don't care
+Kicking strangers out the club while her boobs were bare
+She was sweet, she was wild, queen of every affair
+Emilie, Emilie — best girl ever, we swear
+
+She made out for cab fare (or so she thought)
+Got double charged — justice forgot
+Tried Islam on a Wednesday, lesbian by Thursday
+Came out at Thanksgiving, left Valeria in a month, maybe
+
+Pets galore, emotional zoo
+Jack's ate his fur — what could we do?
+She said "I'm the bouncer!" while falling down stairs
+We just laughed, cuz that's Emily's flair
+
+One hand in the air, shirt off, no shame
+Making out with the bartender, forgetting his name
+From leasing awards to naked despair
+Emilie, Emilie — best girl ever, we swear
+
+But seasons change, and chaos sleeps
+She packed up the pain and found some peace
+Now she hums in parks, plays crystal tones
+Doing soundbaths solo, healing on her own
+
+One hand in the air, now it's calm and clear
+She traded clubs for chakras and says she's sincere
+From blurred bars to soundwaves, she's breathing fresh air
+Emilie, Emilie — still the best girl ever, we swear
+
+"She used to scream in stilettos.
+Now she whispers with singing bowls.
+And somehow — it's still iconic.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 8: Te Rompí el Brazo (Pero No el Corazón) -->
+    <section id="track8" class="song-section bg-brazo paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Te Rompí el Brazo (Pero No el Corazón)
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+Noche normal, tragos con Taca
+Risas falsas, todo se acaba
+Entramos al club, South Beach brillaba
+Y algo entre tú y yo… explotaba
+
+No sé por qué, no sé por quién
+Tus palabras, mis enojos, y el desdén
+Saliste corriendo, no quise parar
+Te alcancé… y te hice tropezar
+
+Te rompí el brazo, pero no el corazón
+No sabíamos, solo fue la emoción
+Tú con tu yeso, yo con el rencor
+Ignorándonos bajo el mismo neón
+Hasta que un día en Crocker Bar
+Volvimos a hablar… sin tener que explicar
+
+Brunch con Archer, mimosas sin fin
+Mensaje de Yousef, y fue el fin
+"Estamos en urgencias, ¿dónde están?"
+Pero era tarde, estábamos mal
+
+Taxi sin pago, casi nos matan
+Corrimos del lío como dos ratas
+Y tú con tu novio, herido, callado
+Yo en el club, fingiendo que no ha pasado
+
+Te rompí el brazo, pero no el corazón
+No sabíamos, solo fue la emoción
+Tú con tu yeso, yo con el rencor
+Ignorándonos bajo el mismo neón
+Hasta que un día en Crocker Bar
+Volvimos a hablar… sin tener que explicar
+
+Tus ojos decían lo que tus labios no
+Que aún quedaba algo entre tú y yo
+No amor… solo historia
+Y una amistad que ni el drama destroza
+
+Te rompí el brazo, pero no el corazón
+Y aunque dolió… no fue el fin, mi amigo
+Tú con tu yeso, yo con mi error
+Y ahora seguimos, como antes, mejor
+Porque lo real… sobrevive el dolor
+Te rompí el brazo — pero no el corazón
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 9: You Were Here (More than Fur) -->
+    <section id="track9" class="song-section bg-piggies paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    You Were Here (More than Fur)
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+He found him small, with eyes so wide
+A Bengal soul, pure golden light
+Through every move, through love and pain
+he stayed close through storms and change
+
+From Houston's heat to Cali air
+He curled up soft, just always there
+A quiet friend, a beating heart
+The kind that knows you from the start
+
+Oh Piggies, more than just a name
+He wasn't "just a pet," not even close
+He held the space, the passing years
+He stayed when others disappeared
+Now Kibis waits by the window sill
+Still searching for his brother's will
+And every day that passes near
+Is proof that Piggies…
+He was here
+
+He nursed him through those final days
+When light grew thin and legs gave way
+The liver failed, the sight went dim
+But love kept surging out from him
+
+And when the message finally came
+It held no blame, it named no pain
+Just: "He's not good" — and nothing more
+But silence says what we adore
+
+Oh Piggies, more than fur or breath
+A presence large enough to stretch beyond his death
+He stayed through breakups, beds and walls
+He caught the tears when no one called
+Now Kibis walks where Piggies lay
+Still listening in that gentle way
+And every moment, year to year
+Remembers Piggies…
+He was here
+
+No child, but he was loved as one
+His memory burns like morning sun
+They built a life, they made a home
+And even now… he's not alone
+
+Oh Piggies, rest where pain can't reach
+But your soft grace still has much to teach
+You showed what unconditional means
+In snuggled nights and soft routines
+Now Kibis watches with patient grace
+Still waiting for your spirit's trace
+And every time we hold back tears
+It's just because…
+You were here
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 10: Palm Springs Apology Tour -->
+    <section id="track10" class="song-section bg-springs paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Palm Springs Apology Tour
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+Flew in for a weekend, hadn't seen him in a while
+Leslie's bridal shower, Palm Springs in style
+Met his friends for the first time
+Tried to shine a little too bright
+
+Sipped too fast, nerves took the wheel
+Said too much, forgot what was real
+Called them all tens — but not quite all
+Then laughed too loud and watched myself fall
+
+And no one apologized, but I cried
+Drank the moonlight, said goodbye
+Woke up lost in a stranger's score
+That weekend turned into folklore
+I was the moment, I was the mess
+Jessica kissed me, cleared the rest
+A little too much, but still sincere
+Palm Springs apology tour — year after year
+
+Phill was quiet, I said "Arash"
+Didn't know the night had crashed
+Leslie's laugh turned into doubt
+And I blacked in while getting iced out
+
+Drag queens danced, I took the pill
+Thought I was dying on that hill
+Made my goodbyes to the sky above
+And Jessica said, "You're enough."
+
+And no one apologized, but I cried
+Said I'm sorry with my pride
+Felt like shame in a desert room
+But healing came in a kiss, not a broom
+I was the noise, I was the light
+And somehow still not quite alright
+But love came back like it always does
+Palm Springs apology — all because
+
+I should've been held, not judged
+I should've been met with love
+But therapy taught me how to bend
+And Phill, he always comes back again
+
+No one apologized… but I've let go
+The desert keeps what it needs to know
+We laugh now when the topic appears
+A messy memory through the years
+Still the best of friends, still my core
+Even after my
+Palm Springs
+Apology Tour
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 11: We Love Uncle Phill -->
+    <section id="track11" class="song-section bg-uncle paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    We Love Uncle Phill
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+Yeah, yeah — oh, he's still here
+Still ours. Still real.
+Uncle Phill.
+
+From wild nights to morning light
+From Houston sparks to Cali skies
+He's been the one, he's been the thread
+The loudest laugh, the softest bed
+
+He shows up with that steady calm
+In every storm, in every song
+Not loud for show, not chasing fame
+But baby, we all know his name
+
+He's got that timing, got that spark
+Turns every moment into art
+He's not the center — but he shines
+He's been my brother through all time
+
+We love Uncle Phill — say it true
+Not just for what he says or do
+But how he stays, how he stands tall
+He's been the heart behind it all
+We love Uncle Phill — and it shows
+From inside jokes to midnight calls
+Still got that edge, still got that thrill
+And yeah, we love Uncle Phill
+
+He laughs with Rob, they get along
+Plays with the kids, but keeps it strong
+He's part of everything we've grown
+A name engraved inside our home
+
+The sparkle's never just for fun
+It's who he is when day is done
+He holds our memories in his hands
+And keeps us grounded where we stand
+
+No script, no role, no guide to play
+But somehow he shows up each day
+With open arms and stories long
+He's been the root — we've grown on
+
+We love Uncle Phill — that's the truth
+He's got the soul, he's got the proof
+No need for spotlight, never will
+He's our forever, Uncle Phill
+We love Uncle Phill — no pretend
+He's more than chosen, he's the end
+Of every fear and every doubt
+He's what this life's been all about
+
+Uh —
+Call him steady, call him cool
+Never played by any rule
+Godfather but not for show
+He's the real one, now you know
+
+Got that loyalty, got that grace
+Walks in peace, but owns the space
+No cape, no crown — but still that guy
+Friend for life, and that's no lie
+
+We love Uncle Phill — like a flame
+Flickering joy, never the same
+From laughs to tears, from fight to still
+We ride or die for Uncle Phill
+We love Uncle Phill — this is fact
+Always forward, never back
+No other bond could fit this bill
+Forever love…
+Uncle Phill.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 12: Still Here -->
+    <section id="track12" class="song-section bg-here paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Still Here
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+We've been wild, we've been wrong
+We've been loud, we've been strong
+From city nights to morning light
+You've had my back this whole damn ride
+
+We've made mistakes, we've talked too much
+We've shown up late, we've lost some trust
+But through it all, one thing is true
+I always know I've got you
+
+And I'm still here, I always will be
+Through every high, through every heavy
+We've come so far, and we still stand
+Not just a friend — you're part of my fam
+Whatever comes, whatever's new
+You've got a brother — I've got you
+
+From heartbreak nights to wedding days
+From blacked-out bars to quiet praise
+We've been through storms, we've been through grace
+You're one of the few I'd never replace
+
+You've met my world, you've held my kids
+Laughed with my husband, danced through this
+You're not by blood, but through and through
+You're my brother — that much is true
+
+And I'm still here, I always will be
+Through every joy, through every "you'll see"
+We've come so far, and we still rise
+You're in my circle for all my life
+Whatever storms still come in view
+You've got a brother — I've got you
+
+No script for this, just time and heart
+We've built something that won't fall apart
+And if the world forgets our names
+You'll still be in my hall of fame
+
+Yeah, I'm still here, I always will be
+In every laugh, in every memory
+We've come so far, we're still not through
+This is forever — me and you
+Whatever life decides to do
+You've got a brother —
+I've got you
+
+Still here.
+Always will be.
+Brother for life.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 13: From Boy to Flame (Bonus Track) -->
+    <section id="track13" class="song-section bg-flame paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    From Boy to Flame <span class="text-2xl text-gray-500">(Bonus Track)</span>
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+He shuffled under neon beams,
+A backwards cap, soft eyes unseen.
+Waco boy with fire inside,
+Quiet heart he tried to hide.
+
+Found his way through smoky nights,
+Club lights flash, but something's tight.
+A borrowed world, a borrowed dream,
+A love too big to fit the seams.
+
+He said yes before he broke,
+With every light, another smoke.
+They danced through nights that wouldn't last,
+But love like that still haunts the past.
+
+L.A. came, and so did doubt,
+He changed his shape, he phased him out.
+Faith and shame in silent war,
+Locked the door but left it sore.
+
+And when he left, he left it clean,
+No scream, no fight, no final scene.
+Just yoga mats and softer friends,
+The love was gone, but not the end.
+
+A heartbreak born from something true,
+A boy who helped him see it through.
+No vows remain, no picture frame,
+But Phill, he rose up from the flame.
+
+Still friends, still breath, but not the same—
+Just the echo of his name.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Track 14: Valentina (Bonus Track) -->
+    <section id="track14" class="song-section bg-valentina paper-texture">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="lyric-container fade-in">
+                <h2 class="script-font text-4xl md:text-5xl text-gray-800 mb-8 text-center">
+                    Valentina <span class="text-2xl text-gray-500">(Bonus Track)</span>
+                </h2>
+                <div class="text-lg leading-relaxed text-gray-700 whitespace-pre-line">
+Greenway heat, poolside glow
+Laughter loud, the cocktails flow
+Jealous glances, subtle shift
+The kind of day that starts with bliss
+
+Rob was new, the vibe was bright
+But one wrong look set off the spark
+Back at home, the voices soared
+And then — the bottle hit the floor
+
+Hot sauce on the tile, glass in the air
+No one saw it coming — drama everywhere
+Phill caught the spark, straight to the skin
+It burned like fire, and that's where it begins
+
+Valentina, on the floor
+Broken glass and open doors
+Heat and hurt, but we survived
+Now we laugh, we're still alive
+Valentina, sting and scar
+Some wild times show you who you are
+
+Rob storms out, but left his keys
+Came back in like a storm at sea
+Words were said, but hearts held fast
+Even hot sauce pain won't last
+
+It wasn't perfect, but it's real
+A wild fight, a cut to heal
+From salty wounds to wedding rings
+From yelling loud to better things
+
+Valentina, on the floor
+Broken glass and open doors
+Heat and hurt, but we survived
+Now we laugh, we're still alive
+Valentina, sting and scar
+Some wild times show you who you are
+
+Now there's kids and morning light
+Uncle Phill still shining bright
+One wild night we can't forget
+A little pain, no regret
+
+Valentina…
+some bottles break, but hearts don't end
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Outro Section -->
+    <section id="outro" class="min-h-screen flex items-center justify-center relative paper-texture">
+        <div class="text-center max-w-4xl mx-auto px-6 fade-in">
+            <div class="w-32 h-1 bg-gradient-to-r from-rose-300 to-blue-300 mx-auto rounded-full mb-12"></div>
+            <h2 class="script-font text-5xl md:text-6xl text-gray-800 mb-8">
+                Thank you for being part of the story
+            </h2>
+            <p class="text-xl md:text-2xl text-gray-600 mb-12 font-light">
+                These memories live forever in our hearts
+            </p>
+            <div class="space-y-4">
+                <p class="text-lg text-gray-500 typewriter-font">
+                    Every song a memory,<br>
+                    Every memory a treasure,<br>
+                    Every treasure a piece of who we are.
+                </p>
+            </div>
+            <div class="mt-16 flex justify-center space-x-8">
+                <button onclick="window.scrollTo(0,0)" class="bg-gradient-to-r from-rose-400 to-blue-400 text-white px-8 py-3 rounded-full hover:shadow-lg transition-all duration-300">
+                    <i class="fas fa-arrow-up mr-2"></i>Back to Top
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Smooth scrolling for navigation
+        document.querySelectorAll('.nav-dot').forEach(dot => {
+            dot.addEventListener('click', function() {
+                const target = document.querySelector(this.dataset.target);
+                target.scrollIntoView({ 
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            });
+        });
+
+        // Update active nav dot on scroll
+        window.addEventListener('scroll', function() {
+            const sections = document.querySelectorAll('section');
+            const navDots = document.querySelectorAll('.nav-dot');
+            let current = '';
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 200) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navDots.forEach(dot => {
+                dot.classList.remove('active');
+                if (dot.dataset.target === '#' + current) {
+                    dot.classList.add('active');
+                }
+            });
+        });
+
+        // Fade in animation on scroll
+        const observerOptions = {
+            threshold: 0.3,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver(function(entries) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-in').forEach(el => {
+            observer.observe(el);
+        });
+
+        // Add sparkle cursor effect
+        document.addEventListener('mousemove', function(e) {
+            if (Math.random() > 0.7) {
+                const sparkle = document.createElement('div');
+                sparkle.style.position = 'fixed';
+                sparkle.style.left = e.clientX + 'px';
+                sparkle.style.top = e.clientY + 'px';
+                sparkle.style.width = '4px';
+                sparkle.style.height = '4px';
+                sparkle.style.background = 'rgba(255,255,255,0.8)';
+                sparkle.style.borderRadius = '50%';
+                sparkle.style.pointerEvents = 'none';
+                sparkle.style.zIndex = '9999';
+                sparkle.style.animation = 'sparkle 1s ease-out forwards';
+                document.body.appendChild(sparkle);
+
+                setTimeout(() => {
+                    sparkle.remove();
+                }, 1000);
+            }
+        });
+
+        // Add sparkle animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes sparkle {
+                0% { transform: scale(0) rotate(0deg); opacity: 1; }
+                50% { transform: scale(1) rotate(180deg); opacity: 0.8; }
+                100% { transform: scale(0) rotate(360deg); opacity: 0; }
+            }
+        `;
+        document.head.appendChild(style);
+    </script>
+</body>
+</html>
